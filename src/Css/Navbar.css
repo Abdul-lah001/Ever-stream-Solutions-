@@ -1,0 +1,123 @@
+.headbar{
+  padding: 1rem;
+  border-bottom: 0.5px solid rgb(241, 239, 239);
+  /* display: flex; */
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  cursor: pointer;
+}
+.site-logo span{
+  font-size: 15px;
+  font-weight: bolder;
+  
+  
+}
+.site-name{
+ color: rgb(10, 163, 10);
+}
+
+.nav-link{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.home-link, 
+.about-link, 
+.service-link, 
+.review-link {
+  font-size: 15px;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.2rem;
+
+}
+.home-link:hover, 
+.about-link:hover, 
+.service-link:hover, 
+.review-link:hover {
+  font-weight: bold;
+  border-bottom: 1.5px solid rgb(10, 163, 10);
+  transform: translateY(-2px);  
+}
+
+
+.btn{
+  background-color:rgb(10, 163, 10) ;
+  padding: 0.8rem 2rem;
+  border: none;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color:rgb(116, 228, 116) ;
+  
+}
+
+.menu-icon{
+  display:none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-logo {
+    padding: 0.5rem;
+  }
+  .site-logo span{
+  font-size: 16px;
+  font-weight: bold;
+}
+.navbar{
+  display:none;
+}
+
+.btn{
+  display: none;
+}
+
+.menu-icon{
+  display:block;
+  width:20px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 1rem;
+}
+.menu-link{
+  display: flex;
+  flex-direction:column;
+  position: absolute ;
+  width: 100vh;
+  background-color: bisque;
+
+}
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    padding: 0.5rem;
+  }
+  .site-logo span{
+  font-size: 14px;
+  font-weight: bold;
+}
+}
+

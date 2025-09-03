@@ -1,0 +1,67 @@
+.menu-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
+} 
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
+}
+
+.side-menu-bar {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row; 
+  gap: 4rem;
+  width: 270px;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.945);
+}
+
+.menu-close-btn {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-close-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.menu-home-link, 
+.menu-about-link, 
+.menu-service-link, 
+.menu-review-link {
+  font-size: 15px;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.80rem;
+  border-radius: 4px; 
+  transition: all 0.3s ease; 
+}
+
+.menu-home-link:hover, 
+.menu-about-link:hover, 
+.menu-service-link:hover, 
+.menu-review-link:hover {
+  background-color: rgb(10, 163, 10);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}

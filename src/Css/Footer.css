@@ -1,0 +1,178 @@
+.footer-page {
+  background: #111827;
+  height: max-content;
+  padding: 4rem 8rem;
+  color: white;
+}
+
+.footer-layout {
+  border-bottom: 0.1px solid #333842;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 35px;
+  flex-wrap: wrap; /* ensures wrapping on smaller screens */
+}
+
+.footer-content-one,
+.footer-content-two,
+.footer-content-three,
+.footer-content-four {
+  padding: 5px;
+  flex: 1;
+  min-width: 200px; /* prevents columns from shrinking too small */
+}
+
+/* Brand/intro */
+.footer-content-one h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content-one p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  max-width: 500px;
+  line-height: 1.5;
+  color: #5f6673;
+}
+
+/* Social icons */
+.icon-cta {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.icon-cta img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-cta img:hover {
+  transform: scale(1.1);
+}
+
+/* Headings inside footer columns */
+.footer-layout h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Links and services */
+.footer-layout ul {
+  color: #5f6673;
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-layout li {
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-layout li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.service-list {
+  line-height: 2;
+}
+
+/* Contact section */
+.footer-content-four div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+  color: #5f6673;
+}
+
+.footer-content-four p:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Copyright */
+.copyright {
+  color: #5f6673;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* ========================== */
+/* Responsive Design */
+/* ========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer-page {
+    padding: 3rem 4rem;
+  }
+
+  .footer-layout {
+    gap: 2rem;
+  }
+
+  .footer-content-one p {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-page {
+    padding: 2rem;
+  }
+
+  .footer-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-content-one,
+  .footer-content-two,
+  .footer-content-three,
+  .footer-content-four {
+    width: 100%;
+  }
+
+  .icon-cta {
+    justify-content: flex-start;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .footer-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-layout h3 {
+    font-size: 1rem;
+  }
+
+  .footer-layout ul {
+    font-size: 0.85rem;
+  }
+
+  .icon-cta img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+}

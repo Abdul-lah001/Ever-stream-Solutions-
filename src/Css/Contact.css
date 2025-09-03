@@ -1,0 +1,85 @@
+.contact-page{
+  background: darkgreen;
+  height: max-content;
+  padding: 8rem;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-layout{
+ text-align: center;
+
+}
+
+.contact-layout h2{
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact-layout p{
+  font-size: 16px;
+  line-height: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  max-width: 700px;
+}
+
+.contact-btn button{
+  padding: 1.3rem 2.5rem;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: darkgreen;
+  margin: auto 10px;
+} 
+.contact-btn button:hover{
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3);
+} 
+
+.btn-two{
+  background:none;
+  border: 2px solid white !important;
+  color: white!important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-page{
+  padding: 4rem;
+}
+}
+
+@media (max-width: 480px) {
+  .contact-layout h2{
+  font-size: 24px;
+}
+
+.contact-layout p{
+  font-size: 14px;
+  line-height: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.contact-btn{
+  display: flex;
+}
+.contact-btn button{
+  padding: 1.2rem;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: darkgreen;
+  margin: auto 10px;
+} 
+ 
+}
+

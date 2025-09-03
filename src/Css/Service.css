@@ -1,0 +1,231 @@
+/* Main service page container */
+.service-page {
+  padding: 4rem 2rem;
+  /* min-height: 100vh; */
+  height: max-content;
+}
+
+/* Service section layout */
+.service-page-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Service headline section */
+.service-headline {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.service-headline h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.service-headline h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.service-headline p {
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Service cards grid layout */
+.service-card-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Individual service card */
+.service-card-container {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-container:hover .image {
+  transform: scale(1.05);
+}
+
+/* Card image container */
+.card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Service icon */
+.icon {
+  position: absolute;
+  top: 180px;
+  left: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+/* Card content */
+.card-content {
+  padding: 2rem 1.5rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn-container{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-service{
+  background-color:rgb(10, 163, 10) ;
+  padding: 0.8rem 2rem;
+  border: none;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-service:hover{
+  background-color:rgb(116, 228, 116) ;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .service-page {
+    padding: 2rem 1rem;
+  }
+  
+  .service-page-layout {
+    padding: 2rem 1rem;
+  }
+  
+  .service-headline {
+    margin-bottom: 3rem;
+  }
+  
+  .service-card-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .icon {
+    top: 170px;
+    left: 1rem;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .icon img {
+    width: 20px;
+    height: 20px;
+  }
+  .btn-container{
+  margin-top: 2rem;
+  text-align: center;
+}
+}
+
+@media (max-width: 480px) {
+  .service-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .service-page-layout {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+  
+  .card-content {
+    padding: 1.5rem 1rem 1rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .service-card-container,
+  .image {
+    transition: none;
+  }
+  
+  .service-card-container:hover {
+    transform: none;
+  }
+  
+  .service-card-container:hover .image {
+    transform: none;
+  }
+}
+
+/* Focus states for accessibility */
+.service-card-container:focus-within {
+  outline: 2px solid #3498db;
+  outline-offset: 4px;
+}
