@@ -4,16 +4,13 @@ import Service from "./Service";
 import About from "./About";
 import Reviews from "../Components/Reviews";
 import Contact from "../Components/Contact";
+import heroSectionImg from "../assets/lawn mow.jpg";
 const Home = () => {
   return (
     <div className="home-page">
       <section className="hero-section">
         <div className="hero-section-img">
-          <img
-            className="image"
-            src="/src/assets/lawn mow.jpg"
-            alt="hero-section"
-          />
+          <img className="image" src={heroSectionImg} alt="hero-section" />
           <div className="hero-content">
             <h1>Professional Property Care & Visual Media Services</h1>
             <p>

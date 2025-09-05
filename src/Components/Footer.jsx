@@ -1,4 +1,11 @@
 import "../Css/Footer.css";
+import FacebookIcon from "../assets/icons/facebook.png";
+import InstagramIcon from "../assets/icons/instagram.png";
+import TwitterIcon from "../assets/icons/twitter.png";
+import PhoneIcon from "../assets/icons/telephone.png";
+import EmailIcon from "../assets/icons/email.png";
+import LocationIcon from "../assets/icons/pin.png";
+
 const Footer = () => {
   const services = [
     "Landscapping",
@@ -18,9 +25,9 @@ const Footer = () => {
             property's value and appeal.
           </p>
           <div className="icon-cta">
-            <img src="/src/assets/icons/facebook.png" alt="fb" />
-            <img src="/src/assets/icons/instagram.png" alt="fb" />
-            <img src="/src/assets/icons/twitter.png" alt="fb" />
+            <img src={FacebookIcon} />
+            <img src={InstagramIcon} alt="fb" />
+            <img src={TwitterIcon} alt="fb" />
           </div>
         </div>
         <div className="footer-content-two">
@@ -42,15 +49,15 @@ const Footer = () => {
         <div className="footer-content-four">
           <h3>Contact us</h3>
           <div>
-            <img src="/src/assets/icons/telephone.png" alt="phone" />
+            <img src={PhoneIcon} alt="phone" />
             <p>(+234)8766 8776</p>
           </div>
           <div>
-            <img src="/src/assets/icons/email.png" alt="mail" />
+            <img src={EmailIcon} alt="mail" />
             <p>info@everstreamsolutions.com</p>
           </div>
           <div>
-            <img src="/src/assets/icons/pin.png" alt="location" />
+            <img src={LocationIcon} alt="location" />
             <p>123, Main Street,Anytown, Nigeria</p>
           </div>
         </div>

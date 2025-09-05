@@ -1,5 +1,6 @@
 import React from "react";
 import "../Css/About.css";
+import aboutImg from "../assets/WhatsApp Image 2025-06-26 at 11.56.04_3de38894.jpg";
 
 const About = () => {
   return (
@@ -34,10 +35,7 @@ const About = () => {
         </section>
 
         <div className="about-image">
-          <img
-            src="/src/assets/WhatsApp Image 2025-06-26 at 11.56.04_3de38894.jpg"
-            alt="img"
-          />
+          <img src={aboutImg} alt="img" />
         </div>
       </div>
     </>

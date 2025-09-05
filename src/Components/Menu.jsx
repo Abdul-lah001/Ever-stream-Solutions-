@@ -1,12 +1,13 @@
 import "../Css/Menu.css";
 import { Link } from "react-router-dom";
+import MenuIcon from "../assets/icons/menu.png";
 const Menu = ({ menuOpen, menuClose }) => {
   if (!menuOpen) return null;
   return (
     <div className="menu-page">
       <div className="side-menu-bar">
         <div className="menu-close-btn" onClick={menuClose}>
-          <img src="/src/assets/icons/close.png" alt="close" />
+          <img src={MenuIcon} alt="close" />
         </div>
         <div className="menu">
           <Link to="/" className="menu-home-link">
