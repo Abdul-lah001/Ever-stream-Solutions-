@@ -1,9 +1,10 @@
 import "../Css/Reviews.css";
+import GraphIcon from "../assets/icons/graph.png";
 const Reviews = () => {
   const reviews = [
     {
       id: 1,
-      icon: "/src/assets/icons/graph.png",
+      icon: GraphIcon,
       comment:
         "'EverStream Solution transformed our yard into a beautiful outdoor space. Their landscaping team was professional and attentive to our needs. Highly recommended'",
       name: "Sarah Oleymi",
@@ -11,7 +12,7 @@ const Reviews = () => {
     },
     {
       id: 2,
-      icon: "/src/assets/icons/graph.png",
+      icon: GraphIcon,
       comment:
         "'We've been using thier carpet cleaning services for our office building, and the results are always outstanding. Clean, fresh, and done efficiently everytime'",
       name: "Michael Eruja",
@@ -19,7 +20,7 @@ const Reviews = () => {
     },
     {
       id: 3,
-      icon: "/src/assets/icons/graph.png",
+      icon: GraphIcon,
       comment:
         "'Their photography services have helped sell properties faster. The quality of images truly showcase each property's best features.'",
       name: "Precious Owo",
