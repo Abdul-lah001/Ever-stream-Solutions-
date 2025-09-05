@@ -3,8 +3,23 @@ import Message from "../Components/Message";
 import Loading from "../Components/Loading";
 import { useState } from "react";
 
+// ✅ Import images directly
+import landscapingImg from "../assets/landscaping.jpg";
+import lawnMowImg from "../assets/lawn mow.jpg";
+import carpetCleaningImg from "../assets/carpet cleaning.jpg";
+import photographyImg from "../assets/photography.jpg";
+import propertyPreservationImg from "../assets/P-Property.jpg";
+import extraPropertyImg from "../assets/c7831cd242a5a56a5c3776ca6b26af9b.jpg";
+
+// ✅ Import icons directly
+import scissorsIcon from "../assets/icons/scissors.svg";
+import homeIcon from "../assets/icons/home.svg";
+import broomIcon from "../assets/icons/broom.svg";
+import cameraIcon from "../assets/icons/camera.svg";
+import shieldIcon from "../assets/icons/shield-check.svg";
+
 const Service = () => {
-  const [messagePopup, SetmessagePopup] = useState(false);
+  const [messagePopup, setMessagePopup] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const services = [
@@ -13,8 +28,8 @@ const Service = () => {
       title: "Landscaping",
       description:
         "Expert landscaping design and maintenance to enhance your property's curb appeal",
-      image: "/src/assets/landscaping.jpg",
-      icon: "/src/assets/icons/scissors.svg",
+      image: landscapingImg,
+      icon: scissorsIcon,
       alt: "Landscaping service",
     },
     {
@@ -22,8 +37,8 @@ const Service = () => {
       title: "Lawn Mowing",
       description:
         "Regular lawn care service to keep your grass healthy and looking its best",
-      image: "/src/assets/lawn mow.jpg",
-      icon: "/src/assets/icons/home.svg",
+      image: lawnMowImg,
+      icon: homeIcon,
       alt: "Property maintenance service",
     },
     {
@@ -31,8 +46,8 @@ const Service = () => {
       title: "Carpet Cleaning",
       description:
         "Through carpet cleaning service to remove stains and refresh your indoor spaces",
-      image: "/src/assets/carpet cleaning.jpg",
-      icon: "/src/assets/icons/broom.svg",
+      image: carpetCleaningImg,
+      icon: broomIcon,
       alt: "Visual media service",
     },
     {
@@ -40,47 +55,46 @@ const Service = () => {
       title: "Photography",
       description:
         "Premium photograph service to showcase your property in the best possible light",
-      image: "/src/assets/photography.jpg",
-      icon: "/src/assets/icons/camera.svg",
+      image: photographyImg,
+      icon: cameraIcon,
       alt: "Visual media service",
     },
     {
       id: 6,
-      title: "Property Perservation",
+      title: "Property Preservation",
       description:
         "Comprehensive property preservation services to maintain security and appeal",
-      image: "/src/assets/P-Property.jpg",
-      icon: "/src/assets/icons/shield-check.svg",
+      image: propertyPreservationImg,
+      icon: shieldIcon,
       alt: "Visual media service",
     },
     {
       id: 7,
-      title: "Property Perservation",
+      title: "Property Preservation",
       description:
         "Comprehensive property preservation services to maintain security and appeal",
-      image: "/src/assets/c7831cd242a5a56a5c3776ca6b26af9b.jpg",
-      icon: "/src/assets/icons/shield-check.svg",
+      image: extraPropertyImg,
+      icon: shieldIcon,
       alt: "Visual media service",
     },
   ];
+
   const handleMessage = () => {
-    SetmessagePopup(true);
+    setMessagePopup(true);
   };
 
   const handleClosepopup = () => {
-    SetmessagePopup(false);
+    setMessagePopup(false);
     setLoading(false);
   };
 
   const handleMessageWithLoading = async () => {
     setLoading(true);
-
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     setLoading(false);
-
     handleMessage();
   };
+
   return (
     <>
       <div className="service-page">
@@ -115,6 +129,7 @@ const Service = () => {
               </article>
             ))}
           </div>
+
           <div className="btn-container">
             <button
               className="btn-service"
@@ -126,6 +141,7 @@ const Service = () => {
           </div>
         </section>
       </div>
+
       {loading && <Loading isOpen={loading} onClose={handleClosepopup} />}
       {!loading && <Message isOpen={messagePopup} onClose={handleClosepopup} />}
     </>
