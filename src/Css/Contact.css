@@ -50,14 +50,11 @@
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  .contact-page{
-  padding: 4rem;
+@media (min-width: 0) and (max-width: 480px) {
+.contact-page{
+  padding: 2.75rem;
 }
-}
-
-@media (max-width: 480px) {
-  .contact-layout h2{
+ .contact-layout h2{
   font-size: 24px;
 }
 
@@ -69,17 +66,18 @@
 }
 .contact-btn{
   display: flex;
+  justify-content: center;
 }
 .contact-btn button{
-  padding: 1.2rem;
-  border: none;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  color: darkgreen;
-  margin: auto 10px;
-} 
- 
+  padding: 1rem 2rem;
+  font-size: 10px;
+  margin: auto 5px;
+}
+                               
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-page{
+  padding: 4rem;
+}
+}
 }
 

@@ -1,7 +1,8 @@
 import "../Css/Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import Menu from "./Menu";
+import MenuIcon from "../assets/icons/menu.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,18 +24,38 @@ const Navbar = () => {
 
             <nav className="navbar">
               <div className="nav-link">
-                <Link to="/" className="home-link">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "link active " : "link"
+                  }
+                >
                   Home
-                </Link>
-                <Link to="/about" className="about-link">
+                </NavLink>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "link active " : "link"
+                  }
+                >
                   About
-                </Link>
-                <Link to="/services" className="service-link">
+                </NavLink>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive ? "link active " : "link"
+                  }
+                >
                   Services
-                </Link>
-                <Link to="/reviews" className="review-link">
+                </NavLink>
+                <NavLink
+                  to="/reviews"
+                  className={({ isActive }) =>
+                    isActive ? "link active " : "link"
+                  }
+                >
                   Reviews
-                </Link>
+                </NavLink>
               </div>
             </nav>
             <div>
@@ -46,7 +67,7 @@ const Navbar = () => {
               </button>
             </div>
             <div div className="menu-icon" onClick={toggleMenu}>
-              <img src="/src/assets/icons/menu.png" alt="menu" />
+              <img src={MenuIcon} alt="menu" />
             </div>
           </div>
         </header>
