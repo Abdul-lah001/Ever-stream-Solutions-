@@ -5,8 +5,7 @@ const Menu = ({ menuOpen, menuClose }) => {
   if (!menuOpen) return null;
   return (
     <>
-      <div className="menu-page">
-        <div className="close" onClick={menuClose}></div>
+      <div className="menu-page" onClick={menuClose}>
         <div className="side-menu-bar">
           <div className="menu-close-btn" onClick={menuClose}>
             <img src={CloseIcon} alt="close" />
@@ -15,7 +14,7 @@ const Menu = ({ menuOpen, menuClose }) => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "menu-link active" : "menu-link"
+                isActive ? "links active " : "links"
               }
             >
               Home
@@ -23,7 +22,7 @@ const Menu = ({ menuOpen, menuClose }) => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "menu-link active" : "menu-link"
+                isActive ? "links active " : "links"
               }
             >
               About
@@ -31,7 +30,7 @@ const Menu = ({ menuOpen, menuClose }) => {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                isActive ? "menu-link active" : "menu-link"
+                isActive ? "links active " : "links"
               }
             >
               Services
@@ -39,7 +38,7 @@ const Menu = ({ menuOpen, menuClose }) => {
             <NavLink
               to="/reviews"
               className={({ isActive }) =>
-                isActive ? "menu-link active" : "menu-link"
+                isActive ? "links active " : "links"
               }
             >
               Reviews
